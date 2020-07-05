@@ -1,0 +1,18 @@
+<%#the symbol in the scope tells the form_with helper what the form is for. FormBuilder Object %>
+<%= form_with scope: :goal, url: goals_path, local: true do |form| %>
+    <p>
+        <%=form.label :title %><br>
+        <%=form.text_field :title %>
+    </p>
+
+    <p>
+        <%=form.label :text %><br>
+        <%=form.text_area :text %>
+    </p>
+
+    <p>
+        <%= form.label :click_me! %>
+        <%= form.submit %>
+    </p>
+
+<% end %>
